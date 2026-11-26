@@ -1,6 +1,4 @@
-/* =========================================================
-   STYLE – SALLE 1 : LES MINERAIS ET MATÉRIAUX
-   ========================================================= */
+/* SALLE 1 : MINERAIS ET MATÉRIAUX */
 
 * {
   box-sizing: border-box;
@@ -16,17 +14,7 @@ body {
   font-family: "Courier New", monospace;
   color: #ffffff;
   min-height: 100vh;
-
-  /* Fond par défaut (dégradé) */
-  background-color: #1d1d1d;
-  background-image: linear-gradient(#2c3a3a, #101818);
-
-  /* =====================================================
-     >>> ICI : IMAGE DE FOND DE LA SALLE 1 <<<
-     Décommente la ligne suivante avec le chemin de ton image :
-     ===================================================== */
-  /* background-image: url("../images/fond-salle1.jpg"); */
-
+  background-image: url("../images/fond-salle1.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -75,7 +63,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* ---------- Grille des cartes ---------- */
+/* Grille des cartes */
 .grille {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -94,13 +82,12 @@ h2 {
 
 .carte:hover {
   transform: translateY(-5px);
-  /* --x et --y sont calculées par le JavaScript */
   background:
     radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.35), transparent 60%),
     #3a3a3a;
 }
 
-/* ---------- Emplacement d'image ---------- */
+/* Emplacement d'image */
 .image {
   height: 120px;
   margin-bottom: 8px;
@@ -112,18 +99,18 @@ h2 {
   image-rendering: pixelated;
 }
 
-/* =====================================================
-   >>> ICI : LES IMAGES DES MINERAIS <<<
-   Décommente chaque ligne et mets le chemin de ton image
-   (l'image s'affiche sur la carte ET dans la fiche)
-   ===================================================== */
-.img-diamant   { /* background-image: url("../images/diamant.png"); */ }
-.img-emeraude  { /* background-image: url("../images/emeraude.png"); */ }
-.img-or        { /* background-image: url("../images/or.png"); */ }
-.img-fer       { /* background-image: url("../images/fer.png"); */ }
-.img-netherite { /* background-image: url("../images/netherite.png"); */ }
+/* Images */
+.img-charbon   { background-image: url("../images/charbon.png"); }
+.img-fer       { background-image: url("../images/fer.png"); }
+.img-cuivre    { background-image: url("../images/cuivre.png"); }
+.img-lapis     { background-image: url("../images/lapis.png"); }
+.img-redstone  { background-image: url("../images/redstone.png"); }
+.img-or        { background-image: url("../images/or.png"); }
+.img-diamant   { background-image: url("../images/diamant.png"); }
+.img-emeraude  { background-image: url("../images/emeraude.png"); }
+.img-netherite { background-image: url("../images/netherite.png"); }
 
-/* ---------- Fiche détaillée (pop-up) ---------- */
+/* Fiche détaillée (pop-up) */
 .fiche {
   display: none;
   position: fixed;

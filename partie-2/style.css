@@ -1,0 +1,210 @@
+/* =========================================================
+   STYLE – SALLE 2 : LES OBJETS LÉGENDAIRES
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --accent: #ff88ff;
+}
+
+body {
+  font-family: "Courier New", monospace;
+  color: #ffffff;
+  min-height: 100vh;
+
+  /* Fond par défaut (dégradé) */
+  background-color: #1d1d1d;
+  background-image: linear-gradient(#3a2a4a, #150f1c);
+
+  /* =====================================================
+     >>> ICI : IMAGE DE FOND DE LA SALLE 2 <<<
+     Décommente la ligne suivante avec le chemin de ton image :
+     ===================================================== */
+  /* background-image: url("../images/fond-salle2.jpg"); */
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.75);
+  border-bottom: 4px solid var(--accent);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 12px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 4px;
+  padding: 8px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  background: #555555;
+  border: 3px solid #222222;
+  transition: transform 0.2s, background 0.2s;
+}
+
+nav a:hover,
+nav a.actif {
+  background: #8a3a8a;
+  transform: translateY(-3px);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.intro {
+  margin-bottom: 20px;
+}
+
+/* ---------- Grille des cartes ---------- */
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.carte {
+  position: relative;
+  background: #3a3a3a;
+  border: 3px solid #000000;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.carte:hover {
+  transform: translateY(-5px);
+  /* --x et --y sont calculées par le JavaScript */
+  background:
+    radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.35), transparent 60%),
+    #3a3a3a;
+}
+
+/* ---------- Emplacement d'image ---------- */
+.image {
+  height: 120px;
+  margin-bottom: 8px;
+  background-color: rgba(0, 0, 0, 0.35);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px dashed #777777;
+  image-rendering: pixelated;
+}
+
+/* =====================================================
+   >>> ICI : LES IMAGES DES OBJETS <<<
+   Décommente chaque ligne et mets le chemin de ton image
+   (l'image s'affiche sur la carte ET dans la fiche)
+   ===================================================== */
+.img-oeuf    { /* background-image: url("../images/oeuf-dragon.png"); */ }
+.img-elytres { /* background-image: url("../images/elytres.png"); */ }
+.img-trident { /* background-image: url("../images/trident.png"); */ }
+.img-totem   { /* background-image: url("../images/totem.png"); */ }
+
+/* ---------- Fiche détaillée (pop-up) ---------- */
+.fiche {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: default;
+}
+
+.fiche.ouverte {
+  display: flex;
+  animation: apparition 0.3s;
+}
+
+.fiche.fermeture {
+  animation: disparition 0.3s;
+}
+
+.fiche-contenu {
+  position: relative;
+  width: 90%;
+  max-width: 420px;
+  background: #2b2b2b;
+  border: 4px solid var(--accent);
+  padding: 20px;
+  text-align: center;
+}
+
+.fiche.ouverte .fiche-contenu {
+  animation: zoom 0.3s;
+}
+
+.fiche-contenu .image {
+  height: 160px;
+}
+
+.details {
+  line-height: 1.6;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.fermer {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  font-family: inherit;
+  color: #ffffff;
+  background: #aa3333;
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+
+.fermer:hover {
+  background: #ff5555;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  margin-top: 30px;
+}
+
+/* ---------- Animations ---------- */
+@keyframes apparition {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes disparition {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes zoom {
+  from { transform: scale(0.6); }
+  to   { transform: scale(1); }
+}

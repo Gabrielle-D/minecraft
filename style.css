@@ -1,0 +1,215 @@
+/* =========================================================
+   STYLE – PAGE D'ACCUEIL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --accent: #55ff55;
+}
+
+body {
+  font-family: "Courier New", monospace;
+  color: #ffffff;
+  min-height: 100vh;
+
+  /* Fond par défaut (dégradé) */
+  background-color: #1d1d1d;
+  background-image: linear-gradient(#2f2f2f, #111111);
+
+  /* =====================================================
+     >>> ICI : IMAGE DE FOND DE LA PAGE D'ACCUEIL <<<
+     Supprime la ligne de dégradé ci-dessus et décommente
+     la ligne suivante avec le chemin de ton image :
+     ===================================================== */
+  /* background-image: url("images/fond-accueil.jpg"); */
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ---------- En-tête et navigation ---------- */
+header {
+  background: rgba(0, 0, 0, 0.75);
+  border-bottom: 4px solid var(--accent);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 12px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 4px;
+  padding: 8px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  background: #555555;
+  border: 3px solid #222222;
+  transition: transform 0.2s, background 0.2s;
+}
+
+nav a:hover,
+nav a.actif {
+  background: #3a8a3a;
+  transform: translateY(-3px);
+}
+
+/* ---------- Contenu ---------- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  background: rgba(0, 0, 0, 0.6);
+  border: 3px solid #000000;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+h3 {
+  margin: 8px 0;
+}
+
+.presentation p {
+  line-height: 1.6;
+}
+
+/* ---------- Cartes (effet de lumière qui suit la souris) ---------- */
+.carte {
+  background: #3a3a3a;
+  border: 3px solid #000000;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.carte:hover {
+  transform: translateY(-5px);
+  /* --x et --y sont calculées par le JavaScript */
+  background:
+    radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.35), transparent 60%),
+    #3a3a3a;
+}
+
+/* ---------- Liens vers les salles ---------- */
+.salles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.salle-lien {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.icone {
+  font-size: 40px;
+}
+
+/* ---------- Compteur ---------- */
+.compteur {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffd700;
+  margin: 12px 0;
+}
+
+.felicitations {
+  display: none;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.felicitations.visible {
+  display: block;
+  animation: rebond 0.6s;
+}
+
+/* ---------- Trésors ---------- */
+.reserve,
+.vitrine {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.vitrine {
+  min-height: 60px;
+  border: 3px dashed #777777;
+  padding: 12px;
+}
+
+/* Emplacement d'image (carré avec bordure en pointillés) */
+.image {
+  height: 110px;
+  margin-bottom: 8px;
+  background-color: rgba(0, 0, 0, 0.35);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px dashed #777777;
+  image-rendering: pixelated;
+}
+
+/* =====================================================
+   >>> ICI : LES IMAGES DES TRÉSORS <<<
+   Décommente chaque ligne et mets le chemin de ton image
+   ===================================================== */
+.img-diamant    { /* background-image: url("images/diamant.png"); */ }
+.img-emeraude   { /* background-image: url("images/emeraude.png"); */ }
+.img-netherite  { /* background-image: url("images/netherite.png"); */ }
+.img-oeuf       { /* background-image: url("images/oeuf-dragon.png"); */ }
+.img-elytres    { /* background-image: url("images/elytres.png"); */ }
+.img-totem      { /* background-image: url("images/totem.png"); */ }
+
+/* États d'un trésor : caché / découvert (géré avec classList) */
+.tresor .secret {
+  display: none;
+}
+
+.tresor.decouvert .secret {
+  display: block;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.tresor.decouvert .mystere {
+  display: none;
+}
+
+.tresor.decouvert {
+  border-color: #ffd700;
+  animation: rebond 0.6s;
+}
+
+/* ---------- Pied de page ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* ---------- Animation ---------- */
+@keyframes rebond {
+  0%   { transform: scale(0.8); }
+  60%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musée Minecraft – Accueil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>⛏️ Le Musée Minecraft</h1>
+    <nav>
+      <a href="index.html" class="actif">Accueil</a>
+      <a href="partie-1/index.html">Salle 1</a>
+      <a href="partie-2/index.html">Salle 2</a>
+      <a href="partie-3/index.html">Salle 3</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PRÉSENTATION -->
+    <section class="presentation">
+      <h2>Bienvenue au musée !</h2>
+      <p>
+        Explore nos trois salles et découvre les minerais les plus précieux,
+        les objets légendaires et les créatures mythiques de Minecraft.
+      </p>
+    </section>
+
+    <!-- ACCÈS RAPIDES AUX SALLES -->
+    <section>
+      <h2>Les collections</h2>
+      <div class="salles">
+        <a class="carte salle-lien" href="partie-1/index.html">
+          <span class="icone">💎</span>
+          <h3>Salle 1</h3>
+          <p>Les minerais et matériaux</p>
+        </a>
+        <a class="carte salle-lien" href="partie-2/index.html">
+          <span class="icone">🥚</span>
+          <h3>Salle 2</h3>
+          <p>Les objets légendaires</p>
+        </a>
+        <a class="carte salle-lien" href="partie-3/index.html">
+          <span class="icone">🐉</span>
+          <h3>Salle 3</h3>
+          <p>Les créatures mythiques</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- COMPTEUR + CHASSE AUX TRÉSORS -->
+    <section>
+      <h2>Chasse aux trésors</h2>
+      <p>Clique sur un coffre pour le découvrir : il rejoint ta vitrine !</p>
+      <p class="compteur">0 / 6</p>
+      <p class="felicitations">🎉 Bravo, tu as découvert tous les trésors !</p>
+
+      <div class="reserve">
+
+        <div class="carte tresor">
+          <div class="image img-diamant"></div>
+          <p class="mystere">❓ Trésor caché</p>
+          <p class="secret">💎 Diamant</p>
+        </div>
+
+        <div class="carte tresor">
+          <div class="image img-emeraude"></div>
+          <p class="mystere">❓ Trésor caché</p>
+          <p class="secret">🟢 Émeraude</p>
+        </div>
+
+        <div class="carte tresor">
+          <div class="image img-netherite"></div>
+          <p class="mystere">❓ Trésor caché</p>
+          <p class="secret">⬛ Netherite</p>
+        </div>
+
+        <div class="carte tresor">
+          <div class="image img-oeuf"></div>
+          <p class="mystere">❓ Trésor caché</p>
+          <p class="secret">🥚 Œuf de dragon</p>
+        </div>
+
+        <div class="carte tresor">
+          <div class="image img-elytres"></div>
+          <p class="mystere">❓ Trésor caché</p>
+          <p class="secret">🪽 Élytres</p>
+        </div>
+
+        <div class="carte tresor">
+          <div class="image img-totem"></div>
+          <p class="mystere">❓ Trésor caché</p>
+          <p class="secret">🗿 Totem d'immortalité</p>
+        </div>
+
+      </div>
+
+      <h3>Ma vitrine</h3>
+      <div class="vitrine"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Musée Minecraft – projet de cours</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

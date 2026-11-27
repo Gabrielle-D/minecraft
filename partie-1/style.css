@@ -14,7 +14,7 @@ body {
   font-family: "Courier New", monospace;
   color: #ffffff;
   min-height: 100vh;
-  background-image: url("../images/fond-salle1.jpg");
+  background-image: url("images/fond-salle1.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

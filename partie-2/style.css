@@ -14,7 +14,7 @@ body {
   font-family: "Courier New", monospace;
   color: #ffffff;
   min-height: 100vh;
-  background-image: url("../images/fond-salle2.jpg");
+  background-image: url("images/fond-salle2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -100,13 +100,13 @@ h2 {
 }
 
 /* Images */
-.img-oeuf    { background-image: url("../images/oeuf-dragon.png"); }
-.img-tete    { background-image: url("../images/tete-dragon.png"); }
-.img-elytres { background-image: url("../images/elytres.png"); }
-.img-etoile  { background-image: url("../images/etoile.png"); }
-.img-mass    { background-image: url("../images/masse.png"); }
-.img-trident { background-image: url("../images/trident.png"); }
-.img-totem   { background-image: url("../images/totem.png"); }
+.img-oeuf    { background-image: url("images/oeuf-dragon.png"); }
+.img-tete    { background-image: url("images/tete-dragon.png"); }
+.img-elytres { background-image: url("images/elytres.png"); }
+.img-etoile  { background-image: url("images/etoile.png"); }
+.img-mass    { background-image: url("images/masse.png"); }
+.img-trident { background-image: url("images/trident.png"); }
+.img-totem   { background-image: url("images/totem.png"); }
 
 /* Fiche détaillée (pop-up) */
 .fiche {

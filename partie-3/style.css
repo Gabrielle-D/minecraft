@@ -14,7 +14,7 @@ body {
   font-family: "Courier New", monospace;
   color: #ffffff;
   min-height: 100vh;
-  background-image: url("../images/fond-salle3.jpg");
+  background-image: url("images/fond-salle3.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -100,10 +100,10 @@ h2 {
 }
 
 /* Images */
-.img-dragon  { background-image: url("../images/ender-dragon.png"); }
-.img-wither  { background-image: url("../images/wither.png"); }
-.img-gardien { background-image: url("../images/gardien.png"); }
-.img-warden  { background-image: url("../images/warden.png"); }
+.img-dragon  { background-image: url("images/ender-dragon.png"); }
+.img-wither  { background-image: url("images/wither.png"); }
+.img-gardien { background-image: url("images/gardien.png"); }
+.img-warden  { background-image: url("images/warden.png"); }
 
 /* Fiche détaillée (pop-up) */
 .fiche {

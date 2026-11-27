@@ -1,10 +1,9 @@
 /* SALLE 2 : LES OBJETS LÉGENDAIRES */
 
-/* Police Minecraft (Mojangles) : place le fichier dans le dossier "fonts/" */
+/* Police Minecraft (Mojangles) : fichier dans le dossier "fonts/" */
 @font-face {
   font-family: "Mojangles";
-  src: url("fonts/Mojangles.woff2") format("woff2"),
-       url("fonts/Mojangles.ttf") format("truetype");
+  src: url("../fonts/Mojangles.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -94,7 +93,7 @@ h2 {
 .carte:hover {
   transform: translateY(-5px);
   background:
-    radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.35), transparent 60%),
+    radial-gradient(circle at var(--x, 50%) var(--y, 50%), #8a3a8a, transparent 60%),
     #3a3a3a;
 }
 
@@ -103,11 +102,9 @@ h2 {
   border-radius: 8px;
   height: 120px;
   margin-bottom: 8px;
-  background-color: rgba(0, 0, 0, 0.35);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  border: 2px dashed #777777;
   image-rendering: pixelated;
 }
 

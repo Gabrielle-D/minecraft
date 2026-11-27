@@ -1,4 +1,12 @@
-/* SALLE 1 : MINERAIS ET MATÉRIAUX */
+/* SALLE 3 : LES CRÉATURES MYTHIQUES */
+
+/* Police Minecraft (Mojangles) : place le fichier dans le dossier "fonts/" */
+@font-face {
+  font-family: "Mojangles";
+  src: url("fonts/Mojangles.woff2") format("woff2"),
+       url("fonts/Mojangles.ttf") format("truetype");
+  font-display: swap;
+}
 
 * {
   box-sizing: border-box;
@@ -7,20 +15,21 @@
 }
 
 :root {
-  --accent: #55ffff;
+  --accent: #ff5555;
 }
 
 body {
-  font-family: "Courier New", monospace;
+  font-family: "Mojangles", "Minecraftia", "Courier New", monospace;
   color: #ffffff;
   min-height: 100vh;
-  background-image: url("images/fond-salle1.jpg");
+  background-image: url("images/fond-salle3.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 header {
+  border-radius: 0 0 16px 16px;
   background: rgba(0, 0, 0, 0.75);
   border-bottom: 4px solid var(--accent);
   padding: 20px;
@@ -32,6 +41,7 @@ header h1 {
 }
 
 nav a {
+  border-radius: 8px;
   display: inline-block;
   margin: 4px;
   padding: 8px 16px;
@@ -44,7 +54,7 @@ nav a {
 
 nav a:hover,
 nav a.actif {
-  background: #2a7a8a;
+  background: #8a2a2a;
   transform: translateY(-3px);
 }
 
@@ -71,6 +81,7 @@ h2 {
 }
 
 .carte {
+  border-radius: 12px;
   position: relative;
   background: #3a3a3a;
   border: 3px solid #000000;
@@ -89,6 +100,7 @@ h2 {
 
 /* Emplacement d'image */
 .image {
+  border-radius: 8px;
   height: 120px;
   margin-bottom: 8px;
   background-color: rgba(0, 0, 0, 0.35);
@@ -100,15 +112,10 @@ h2 {
 }
 
 /* Images */
-.img-charbon   { background-image: url("images/charbon.png"); }
-.img-fer       { background-image: url("images/fer.png"); }
-.img-cuivre    { background-image: url("images/cuivre.png"); }
-.img-lapis     { background-image: url("images/lapis.png"); }
-.img-redstone  { background-image: url("images/redstone.png"); }
-.img-or        { background-image: url("images/or.png"); }
-.img-diamant   { background-image: url("images/diamant.png"); }
-.img-emeraude  { background-image: url("images/emeraude.png"); }
-.img-netherite { background-image: url("images/netherite.png"); }
+.img-dragon  { background-image: url("images/ender-dragon.png"); }
+.img-wither  { background-image: url("images/wither.png"); }
+.img-gardien { background-image: url("images/gardien.png"); }
+.img-warden  { background-image: url("images/warden.png"); }
 
 /* Fiche détaillée (pop-up) */
 .fiche {
@@ -135,6 +142,7 @@ h2 {
 }
 
 .fiche-contenu {
+  border-radius: 14px;
   position: relative;
   width: 90%;
   max-width: 420px;
@@ -152,6 +160,17 @@ h2 {
   height: 160px;
 }
 
+.caracteristiques {
+  list-style: none;
+  text-align: left;
+  margin-top: 8px;
+  color: #ffd700;
+}
+
+.caracteristiques li {
+  margin-bottom: 4px;
+}
+
 .details {
   line-height: 1.6;
   text-align: left;
@@ -159,6 +178,7 @@ h2 {
 }
 
 .fermer {
+  border-radius: 8px;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -175,13 +195,14 @@ h2 {
 }
 
 footer {
+  border-radius: 16px 16px 0 0;
   text-align: center;
   padding: 20px;
   background: rgba(0, 0, 0, 0.75);
   margin-top: 30px;
 }
 
-/* ---------- Animations ---------- */
+/* Animations */
 @keyframes apparition {
   from { opacity: 0; }
   to   { opacity: 1; }

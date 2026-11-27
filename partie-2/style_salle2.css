@@ -1,5 +1,13 @@
 /* SALLE 2 : LES OBJETS LÉGENDAIRES */
 
+/* Police Minecraft (Mojangles) : place le fichier dans le dossier "fonts/" */
+@font-face {
+  font-family: "Mojangles";
+  src: url("fonts/Mojangles.woff2") format("woff2"),
+       url("fonts/Mojangles.ttf") format("truetype");
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +19,7 @@
 }
 
 body {
-  font-family: "Courier New", monospace;
+  font-family: "Mojangles", "Minecraftia", "Courier New", monospace;
   color: #ffffff;
   min-height: 100vh;
   background-image: url("images/fond-salle2.jpg");
@@ -21,6 +29,7 @@ body {
 }
 
 header {
+  border-radius: 0 0 16px 16px;
   background: rgba(0, 0, 0, 0.75);
   border-bottom: 4px solid var(--accent);
   padding: 20px;
@@ -32,6 +41,7 @@ header h1 {
 }
 
 nav a {
+  border-radius: 8px;
   display: inline-block;
   margin: 4px;
   padding: 8px 16px;
@@ -71,6 +81,7 @@ h2 {
 }
 
 .carte {
+  border-radius: 12px;
   position: relative;
   background: #3a3a3a;
   border: 3px solid #000000;
@@ -89,6 +100,7 @@ h2 {
 
 /* Emplacement d'image */
 .image {
+  border-radius: 8px;
   height: 120px;
   margin-bottom: 8px;
   background-color: rgba(0, 0, 0, 0.35);
@@ -104,7 +116,7 @@ h2 {
 .img-tete    { background-image: url("images/tete-dragon.png"); }
 .img-elytres { background-image: url("images/elytres.png"); }
 .img-etoile  { background-image: url("images/etoile.png"); }
-.img-mass    { background-image: url("images/masse.png"); }
+.img-masse    { background-image: url("images/masse.png"); }
 .img-trident { background-image: url("images/trident.png"); }
 .img-totem   { background-image: url("images/totem.png"); }
 
@@ -133,6 +145,7 @@ h2 {
 }
 
 .fiche-contenu {
+  border-radius: 14px;
   position: relative;
   width: 90%;
   max-width: 420px;
@@ -157,6 +170,7 @@ h2 {
 }
 
 .fermer {
+  border-radius: 8px;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -173,6 +187,7 @@ h2 {
 }
 
 footer {
+  border-radius: 16px 16px 0 0;
   text-align: center;
   padding: 20px;
   background: rgba(0, 0, 0, 0.75);

@@ -100,15 +100,15 @@ h2 {
 }
 
 /* Images */
-.img-charbon   { background-image: url("../images/charbon.png"); }
-.img-fer       { background-image: url("../images/fer.png"); }
-.img-cuivre    { background-image: url("../images/cuivre.png"); }
-.img-lapis     { background-image: url("../images/lapis.png"); }
-.img-redstone  { background-image: url("../images/redstone.png"); }
-.img-or        { background-image: url("../images/or.png"); }
-.img-diamant   { background-image: url("../images/diamant.png"); }
-.img-emeraude  { background-image: url("../images/emeraude.png"); }
-.img-netherite { background-image: url("../images/netherite.png"); }
+.img-charbon   { background-image: url("images/charbon.png"); }
+.img-fer       { background-image: url("images/fer.png"); }
+.img-cuivre    { background-image: url("images/cuivre.png"); }
+.img-lapis     { background-image: url("images/lapis.png"); }
+.img-redstone  { background-image: url("images/redstone.png"); }
+.img-or        { background-image: url("images/or.png"); }
+.img-diamant   { background-image: url("images/diamant.png"); }
+.img-emeraude  { background-image: url("images/emeraude.png"); }
+.img-netherite { background-image: url("images/netherite.png"); }
 
 /* Fiche détaillée (pop-up) */
 .fiche {

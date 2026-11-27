@@ -1,6 +1,4 @@
-/* =========================================================
-   STYLE – SALLE 3 : LES CRÉATURES MYTHIQUES
-   ========================================================= */
+/* SALLE 3 : LES CRÉATURES MYTHIQUES */
 
 * {
   box-sizing: border-box;
@@ -16,17 +14,7 @@ body {
   font-family: "Courier New", monospace;
   color: #ffffff;
   min-height: 100vh;
-
-  /* Fond par défaut (dégradé) */
-  background-color: #1d1d1d;
-  background-image: linear-gradient(#4a2222, #180a0a);
-
-  /* =====================================================
-     >>> ICI : IMAGE DE FOND DE LA SALLE 3 <<<
-     Décommente la ligne suivante avec le chemin de ton image :
-     ===================================================== */
-  /* background-image: url("../images/fond-salle3.jpg"); */
-
+  background-image: url("../images/fond-salle3.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -75,7 +63,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* ---------- Grille des cartes ---------- */
+/* Grille des cartes */
 .grille {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -94,13 +82,12 @@ h2 {
 
 .carte:hover {
   transform: translateY(-5px);
-  /* --x et --y sont calculées par le JavaScript */
   background:
     radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.35), transparent 60%),
     #3a3a3a;
 }
 
-/* ---------- Emplacement d'image ---------- */
+/* Emplacement d'image */
 .image {
   height: 120px;
   margin-bottom: 8px;
@@ -112,17 +99,13 @@ h2 {
   image-rendering: pixelated;
 }
 
-/* =====================================================
-   >>> ICI : LES IMAGES DES CRÉATURES <<<
-   Décommente chaque ligne et mets le chemin de ton image
-   (l'image s'affiche sur la carte ET dans la fiche)
-   ===================================================== */
-.img-dragon  { /* background-image: url("../images/ender-dragon.png"); */ }
-.img-wither  { /* background-image: url("../images/wither.png"); */ }
-.img-warden  { /* background-image: url("../images/warden.png"); */ }
-.img-gardien { /* background-image: url("../images/gardien-ancien.png"); */ }
+/* Images */
+.img-dragon  { background-image: url("../images/ender-dragon.png"); }
+.img-wither  { background-image: url("../images/wither.png"); }
+.img-gardien { background-image: url("../images/gardien.png"); }
+.img-warden  { background-image: url("../images/warden.png"); }
 
-/* ---------- Fiche détaillée (pop-up) ---------- */
+/* Fiche détaillée (pop-up) */
 .fiche {
   display: none;
   position: fixed;
@@ -204,7 +187,7 @@ footer {
   margin-top: 30px;
 }
 
-/* ---------- Animations ---------- */
+/* Animations */
 @keyframes apparition {
   from { opacity: 0; }
   to   { opacity: 1; }

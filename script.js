@@ -1,6 +1,4 @@
-// =========================================================
-// SCRIPT – PAGE D'ACCUEIL
-// =========================================================
+// PAGE D'ACCUEIL
 
 // 1. Je récupère les éléments de la page avec querySelector / querySelectorAll
 const compteur = document.querySelector(".compteur");

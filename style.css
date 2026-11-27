@@ -1,6 +1,4 @@
-/* =========================================================
-   STYLE – PAGE D'ACCUEIL
-   ========================================================= */
+/* PAGE D'ACCUEIL */
 
 * {
   box-sizing: border-box;
@@ -16,24 +14,13 @@ body {
   font-family: "Courier New", monospace;
   color: #ffffff;
   min-height: 100vh;
-
-  /* Fond par défaut (dégradé) */
-  background-color: #1d1d1d;
-  background-image: linear-gradient(#2f2f2f, #111111);
-
-  /* =====================================================
-     >>> ICI : IMAGE DE FOND DE LA PAGE D'ACCUEIL <<<
-     Supprime la ligne de dégradé ci-dessus et décommente
-     la ligne suivante avec le chemin de ton image :
-     ===================================================== */
-  /* background-image: url("images/fond-accueil.jpg"); */
-
+  background-image: url("images/fond-accueil.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-/* ---------- En-tête et navigation ---------- */
+/* En-tête et navigation */
 header {
   background: rgba(0, 0, 0, 0.75);
   border-bottom: 4px solid var(--accent);
@@ -62,7 +49,7 @@ nav a.actif {
   transform: translateY(-3px);
 }
 
-/* ---------- Contenu ---------- */
+/* Contenu */
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -89,7 +76,7 @@ h3 {
   line-height: 1.6;
 }
 
-/* ---------- Cartes (effet de lumière qui suit la souris) ---------- */
+/* Cartes (effet de lumière qui suit la souris) */
 .carte {
   background: #3a3a3a;
   border: 3px solid #000000;
@@ -101,13 +88,12 @@ h3 {
 
 .carte:hover {
   transform: translateY(-5px);
-  /* --x et --y sont calculées par le JavaScript */
   background:
     radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.35), transparent 60%),
     #3a3a3a;
 }
 
-/* ---------- Liens vers les salles ---------- */
+/* Liens vers les salles */
 .salles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -123,7 +109,7 @@ h3 {
   font-size: 40px;
 }
 
-/* ---------- Compteur ---------- */
+/* Compteur */
 .compteur {
   font-size: 32px;
   font-weight: bold;
@@ -142,7 +128,7 @@ h3 {
   animation: rebond 0.6s;
 }
 
-/* ---------- Trésors ---------- */
+/* Trésors */
 .reserve,
 .vitrine {
   display: grid;
@@ -169,16 +155,13 @@ h3 {
   image-rendering: pixelated;
 }
 
-/* =====================================================
-   >>> ICI : LES IMAGES DES TRÉSORS <<<
-   Décommente chaque ligne et mets le chemin de ton image
-   ===================================================== */
-.img-diamant    { /* background-image: url("images/diamant.png"); */ }
-.img-emeraude   { /* background-image: url("images/emeraude.png"); */ }
-.img-netherite  { /* background-image: url("images/netherite.png"); */ }
-.img-oeuf       { /* background-image: url("images/oeuf-dragon.png"); */ }
-.img-elytres    { /* background-image: url("images/elytres.png"); */ }
-.img-totem      { /* background-image: url("images/totem.png"); */ }
+/* IMAGES */
+.img-diamant    { background-image: url("images/diamant.png"); }
+.img-emeraude   { background-image: url("images/emeraude.png"); }
+.img-netherite  { background-image: url("images/netherite.png"); }
+.img-oeuf       { background-image: url("images/oeuf-dragon.png"); }
+.img-elytres    { background-image: url("images/elytres.png"); }
+.img-totem      { background-image: url("images/totem.png"); }
 
 /* États d'un trésor : caché / découvert (géré avec classList) */
 .tresor .secret {
@@ -200,14 +183,14 @@ h3 {
   animation: rebond 0.6s;
 }
 
-/* ---------- Pied de page ---------- */
+/* Pied de page */
 footer {
   text-align: center;
   padding: 20px;
   background: rgba(0, 0, 0, 0.75);
 }
 
-/* ---------- Animation ---------- */
+/* Animation */
 @keyframes rebond {
   0%   { transform: scale(0.8); }
   60%  { transform: scale(1.1); }

@@ -1,6 +1,4 @@
-// =========================================================
-// SCRIPT – SALLE 1 (même principe dans les salles 2 et 3)
-// =========================================================
+// SALLE 1 : MINERAIS ET MATÉRIAUX
 
 // 1. Je récupère les éléments avec querySelector / querySelectorAll
 const page = document.querySelector("body");
